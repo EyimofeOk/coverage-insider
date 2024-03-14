@@ -1,0 +1,180 @@
+body {
+    font-family: 'Georgia', serif; /* Using a more elegant font */
+    color: #333333; /* Dark grey for general text, making it less stark than black */
+    background-color: #fff; /* White background */
+    padding-top: 100px; /* Adjust if header height changes */
+}
+
+header {
+    background-color: #FAFAFA; /* Almost white for the header background */
+    color: #204056; /* Dark blue for the header text */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adding a subtle shadow for depth */
+}
+
+nav {
+    background-color: #4A4A4A; /* Dark grey for contrast - consider lightening if too stark */
+    padding: 10px;
+}
+
+nav a {
+    color: #E2E2E2; /* Lighter text for links for contrast against the dark background */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold; /* Making navigation text bold */
+}
+
+.main-sections article, .submain-sections article {
+    background-color: #f2f2f2; /* Light grey background */
+    margin: 20px;
+    padding: 20px;
+    border-left: 5px solid #204056; /* Adding a dark blue accent border to articles */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.main-sections img, .submain-sections img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Adding a slight border-radius to images */
+}
+
+footer {
+    background-color: #204056; /* Dark blue to match the text color theme */
+    color: #FAFAFA; /* Almost white text in footer for contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+#siteLogo, #nightModeToggle {
+    height: 60px;
+    width: auto;
+}
+
+#siteLogo {
+margin-right: 20px;
+    float: left; /* Aligns logo to the left */
+}
+
+#nightModeToggle {
+    background: none;
+    border: none;
+    color: #204056; /* Dark blue, adjust if using a different symbol */
+    float: right;
+    font-size: 24px; /* Adjust symbol size */
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+body.night-mode {
+    background-color: #2c3e50; /* Darker background for night mode */
+    color: #ecf0f1; /* Lighter text for readability */
+}
+
+body.night-mode header, body.night-mode footer {
+    background-color: #34495e; /* Adjust header/footer background for night mode */
+}
+
+body.night-mode nav {
+    background-color: #4a4a4a; /* Slightly lighter nav in night mode for contrast */
+}
+
+body.night-mode nav a {
+    color: #bdc3c7; /* Lighter text in nav for night mode */
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.article-image {
+    flex-basis: 40%;
+    margin-right: 20px;
+}
+
+.article-content {
+    flex-basis: 60%;
+}
+
+.image-right .article {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.image-right .article-image {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+    .article-image img {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-image img {
+        max-width: 300px;
+    }
+}
+
+
+
+/*=============== CONTACT PAGE ===============*/
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2364AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #204056;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        margin: 20px;
+    }
+}

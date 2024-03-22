@@ -5,65 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coverage Insider</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Coverage Insider Logo" id="siteLogo">
-        <button id="nightModeToggle"><i class="fas fa-moon"></i></button>
-        <h1>Coverage Insider</h1>
-        <h3>The whispers between the lines. Dare to listen?</h3>
-        <nav>
-            <!-- Navigation links -->
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About Us</a>
-            <a href="magazine.html">Magazine</a>
+    <header class="site-header">
+        <div class="logo-and-line">
+            <div class="logo">
+                <h1>COVERAGE INSIDER</h1>
+            </div>
+            <div class="vertical-line"></div>
+        </div>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="magazine.html">Magazine</a></li>
+            </ul>
         </nav>
     </header>
+    <!-- Page content goes here -->
 
     <main>
-        <!-- Featured Articles Section -->
-        <section class="main-sections">
-            <article class="article">
-                <div class="article-image">
-                    <img src="images/article.jpg" alt="Sample Image">
-                </div>
-                <div class="article-content">
-                    <h2>Article Title</h2>
-                    <p>Article summary...</p>
-                </div>
-            </article>
-            <!-- Repeat for other articles -->
+        <!-- Featured Articles Section -->        
+        <section class="feature-section">
+            <h2>This Month's Feature</h2>
+            <p class="cover-date">March 25, 2024</p>
+            <div class="magazine-cover-container"> 
+                <button class="nav-button prev" onclick="navigateCover(-1)"><i class="fas fa-chevron-left"></i></button>
+                <img src="images/maincover1.jpg" alt="Magazine Cover" id="magazineCover">
+                <button class="nav-button next" onclick="navigateCover(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <p class="cover-caption"><em>On the Grid</em>, by Klaas Verplancke</p>
+        </section> 
+        
+        <section class="article-preview-section">
+            <hr>
+            <h2 class="section-heading">Reporting</h2> <!-- Section Heading -->
+            <div class="articles-container">
+                <article class="article-preview">
+                    <div class="article-text">
+                        <h3>Article Title One</h3>
+                        <p>A few lines of preview text for the first article few lines of preview text for the first article...</p>
+                        <a href="article1.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="article-image">
+                        <img src="images/future.jpg" alt="Article 1 Image">
+                    </div>
+                </article>
+        
+                <article class="article-preview">
+                    <div class="article-text">
+                        <h3>Article Title Two</h3>
+                        <p>A few lines of preview text for the second article few lines of preview text for the second article......</p>
+                        <a href="article2.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="article-image">
+                        <img src="images/future.jpg" alt="Article 2 Image">
+                    </div>
+                </article>
+        
+                <article class="article-preview">
+                    <div class="article-text">
+                        <h3>Article Title Three</h3>
+                        <p>A few lines of preview text for the third article few lines of preview text for the third article...</p>
+                        <a href="article3.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="article-image">
+                        <img src="images/future.jpg" alt="Article 3 Image">
+                    </div>
+                </article>
+        
+                <article class="article-preview">
+                    <div class="article-text">
+                        <h3>Article Title Four</h3>
+                        <p>A few lines of preview text for the fourth article few lines of preview text for the fourth article...</p>
+                        <a href="article4.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="article-image">
+                        <img src="images/future.jpg" alt="Article 4 Image">
+                    </div>
+                </article>
+            </div>
         </section>        
         
-        <section class="submain-sections image-right">
-         <!-- <section class="main-sections"> -->
-            <h2>The Future of Coverage</h2>
-            <article class="article">
-                <div class="article-image">
-                    <img src="images/future.jpg" alt="Future of Coverage">
-                </div>
-                <div class="article-content">
-                    <h3>Exploring New Horizons</h3>
-                    <p>Discover what the future holds for media coverage and how technology shapes our understanding of news.</p>
-                </div>
-            </article>
-        </section>
-        
-        <section class="submain-sections" id="behind-the-scenes">
-            <h2>Behind the Scenes</h2>
-            <article class="article">
-                <div class="article-image">
-                    <img src="images/2017-08-22+BehindScenes.jpg" alt="Behind the Scenes">
-                </div>
-                <div class="article-content">
-                    <h3>The Making of News</h3>
-                    <p>Take a sneak peek into the daily grind of news production, from investigation to publication.</p>
-                </div>
-            </article>
-        </section>        
+             
     </main>
     <footer>
         <!-- Footer content -->

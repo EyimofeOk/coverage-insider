@@ -1,126 +1,235 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
 body {
-    font-family: 'Georgia', serif; /* Using a more elegant font */
-    color: #333333; /* Dark grey for general text, making it less stark than black */
-    background-color: #fff; /* White background */
-    padding-top: 100px; /* Adjust if header height changes */
+    margin: 0;
+    font-family: 'Georgia', sans-serif;
 }
 
-header {
-    background-color: #FAFAFA; /* Almost white for the header background */
-    color: #204056; /* Dark blue for the header text */
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adding a subtle shadow for depth */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Ensure header has a stacking context */
 }
 
-nav {
-    background-color: #4A4A4A; /* Dark grey for contrast - consider lightening if too stark */
-    padding: 10px;
-}
-
-nav a {
-    color: #E2E2E2; /* Lighter text for links for contrast against the dark background */
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold; /* Making navigation text bold */
-}
-
-.main-sections article, .submain-sections article {
-    background-color: #f2f2f2; /* Light grey background */
-    margin: 20px;
-    padding: 20px;
-    border-left: 5px solid #204056; /* Adding a dark blue accent border to articles */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-}
-
-.main-sections img, .submain-sections img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px; /* Adding a slight border-radius to images */
-}
-
-footer {
-    background-color: #204056; /* Dark blue to match the text color theme */
-    color: #FAFAFA; /* Almost white text in footer for contrast */
-    padding: 20px;
-    text-align: center;
-}
-
-#siteLogo, #nightModeToggle {
-    height: 60px;
-    width: auto;
-}
-
-#siteLogo {
-margin-right: 20px;
-    float: left; /* Aligns logo to the left */
-}
-
-#nightModeToggle {
-    background: none;
-    border: none;
-    color: #204056; /* Dark blue, adjust if using a different symbol */
-    float: right;
-    font-size: 24px; /* Adjust symbol size */
-    cursor: pointer;
-    margin-right: 40px;
-}
-
-body.night-mode {
-    background-color: #2c3e50; /* Darker background for night mode */
-    color: #ecf0f1; /* Lighter text for readability */
-}
-
-body.night-mode header, body.night-mode footer {
-    background-color: #34495e; /* Adjust header/footer background for night mode */
-}
-
-body.night-mode nav {
-    background-color: #4a4a4a; /* Slightly lighter nav in night mode for contrast */
-}
-
-body.night-mode nav a {
-    color: #bdc3c7; /* Lighter text in nav for night mode */
-}
-
-.article {
+.logo-and-line {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-.article-image {
-    flex-basis: 40%;
-    margin-right: 20px;
+.vertical-line {
+    height: 50px; /* Adjust the height based on your header size */
+    width: 1px;
+    background-color: #000; /* Or any color that suits your design */
+    margin-left: 20px; /* Adjust the space from the logo to the line */
 }
 
-.article-content {
-    flex-basis: 60%;
-}
-
-.image-right .article {
+.main-nav {
     display: flex;
-    flex-direction: row-reverse;
+    gap: 20px;
 }
 
-.image-right .article-image {
-    margin-left: 20px;
-    margin-right: 0;
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; /* Adjust based on your preference */
+    margin: 0;
 }
 
-@media (max-width: 1024px) {
-    .article-image img {
-        max-width: 450px;
-    }
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Adjust the space between navigation items */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+}
+
+.hamburger {
+    display: none;
 }
 
 @media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        position: relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        background-color: #333;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        bottom: -8px;
+    }
+}
+
+
+.feature-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.feature-section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Adjust spacing around the heading */
+    font-family: 'Playfair Display', serif; /* Example font, adjust as needed */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+}
+
+
+.cover-date {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.magazine-cover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.magazine-cover-container img {
+    width: auto; /* maintain the image's aspect ratio */
+    height: auto; /* maintain the image's aspect ratio */
+    max-width: 300px; /* maximum width */
+    max-height: 350px; /* maximum height */
+    display: block; /* Fixes any alignment issues */
+    margin: 0 auto; /* Centers the image */
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust as needed */
+}
+
+.prev {
+    left: -40px;
+}
+
+.next {
+    right: -40px;
+}
+
+.cover-caption {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+
+.article-preview-section hr {
+    margin-top: 40px;
+    border: none;
+    height: 1px;
+    background-color: #ccc; /* Thin line to separate sections */
+}
+
+.articles-container {
+    max-width: 800px; /* Adjust this value based on your design preference */
+    margin: 0 auto; /* Centers the container */
+    display: flex;
+    flex-direction: column;
+}
+
+.article-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust spacing between text and image */
+    margin-bottom: 20px; /* Space between articles */
+    border-bottom: 1px solid #ccc; /* Thin line as separator */
+    padding-bottom: 20px; /* Add some padding to space out the content above the line */
+}
+
+.article-preview:last-child {
+    border-bottom: none; /* No border for the last article to avoid an extra line at the end */
+}
+
+
+.article-text, .article-image {
+    flex: 1;
+}
+
+.article-image {
+    flex: 1;
+    margin-left: 100px; /* Increase the left margin */
+}
+
+
+.read-more {
+    /* background-color: #000; */
+    color: #BA5C12;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.article-image img {
+    width: 100%;
+    max-width: 200px; /* Keeps the image size consistent */
+    height: auto;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .article-preview {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-text {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
     .article-image img {
-        max-width: 300px;
+        max-width: 100%;
     }
 }
 

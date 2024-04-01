@@ -187,9 +187,10 @@ body {
     padding-bottom: 20px; /* Add some padding to space out the content above the line */
 }
 
+/*
 .article-preview:last-child {
-    border-bottom: none; /* No border for the last article to avoid an extra line at the end */
-}
+    border-bottom: none; /* No border for the last article to avoid an extra line at the end 
+} */
 
 
 .article-text, .article-image {
@@ -233,6 +234,44 @@ body {
     }
 }
 
+/* Main content container */
+.content-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the content */
+    gap: 20px; /* Space between articles and calendar */
+    margin: 20px auto; /* Adjust as needed */
+    max-width: 1200px; /* Or according to your design preference */
+}
+
+/* Article section styling */
+.article-preview-section {
+    flex: 3; /* Takes up more space */
+    /* Ensure the article section is not too wide or narrow */
+    min-width: 0; /* For flexbox overflow handling */
+}
+
+
+.events-calendar-section {
+    flex: 1; /* Takes up less space than the article section */
+    align-self: flex-start; /* Aligns the calendar to start at the same point as articles */
+    padding: 20px;
+    margin-top: 5%; /* Adjust as needed */
+    /* Increase the bottom margin to ensure the calendar ends before the last article line */
+    margin-bottom: 10%; /* Adjust percentage to control where the calendar ends */
+    background-color: #f4f4f4; /* Example background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for depth */
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+    .events-calendar-section {
+        margin-top: 20px;
+        margin-bottom: 20px; /* Add space below the calendar in a stacked layout */
+    }
+}
 
 
 /*=============== CONTACT PAGE ===============*/
@@ -288,6 +327,71 @@ button[type="submit"]:hover {
     }
 }
 
+.site-footer {
+    background-color: #2F394D;
+    color: #fff;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #BA5C12; /* Example highlight color */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #BA5C12;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #BA5C12;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px;
+    }
+}
 
 /*=============== ABOUT ===============*/
 

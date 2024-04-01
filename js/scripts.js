@@ -36,15 +36,20 @@ const covers = [
         caption: "<em>On the Grid</em>, by Klaas Verplancke"
     },
     {
-        img: "images/latest_issue.jpg",
+        img: "images/IMG_4684.jpg",
         caption: "<em>Another Title</em>, by Another Artist"
     },
     {
-        img: "images/latest_issue.jpg",
+        img: "images/IMG_4685.jpg",
         caption: "<em>Third Title</em>, by Another Artist"
-    },    {
-        img: "images/latest_issue.jpg",
+    },    
+    {
+        img: "images/IMG_4686.jpg",
         caption: "<em>Another One Title</em>, by Another Artist"
+    },
+    {
+        img: "images/IMG_4687.jpg",
+        caption: "<em>Third Title</em>, by Another Artist"
     },
 ];
 
@@ -58,3 +63,14 @@ function navigateCover(direction) {
     document.getElementById("magazineCover").src = covers[currentCoverIndex].img;
     document.querySelector(".cover-caption").innerHTML = covers[currentCoverIndex].caption;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const articleSection = document.querySelector('.article-preview-section');
+    const calendarSection = document.querySelector('.events-calendar-section');
+  
+    // Adjust the height of the shorter section to match the taller one
+    const maxHeight = Math.max(articleSection.offsetHeight, calendarSection.offsetHeight);
+    articleSection.style.height = `${maxHeight}px`;
+    calendarSection.style.height = `${maxHeight}px`;
+  });
+  

@@ -221,7 +221,7 @@ body {
 
 .read-more {
     /* background-color: #000; */
-    color: #BA5C12;
+    color: #FF6734;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
@@ -250,6 +250,14 @@ body {
     }
 }
 
+
+/* Article section styling */
+.article-preview-section {
+    flex: 3; /* Takes up more space */
+    /* Ensure the article section is not too wide or narrow */
+    min-width: 0; /* For flexbox overflow handling */
+}
+
 /* Main content container */
 .content-wrapper {
     display: flex;
@@ -259,69 +267,66 @@ body {
     max-width: 1200px; /* Or according to your design preference */
 }
 
-/* Article section styling */
-.article-preview-section {
-    flex: 3; /* Takes up more space */
-    /* Ensure the article section is not too wide or narrow */
-    min-width: 0; /* For flexbox overflow handling */
-}
 
-
-.content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr; /* Calendar, Articles, Subscribe */
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.events-calendar-section, .subscribe-section {
+.subscribe-section {
+    flex: 1;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 5% 2%; /* Adjust margins to add some space around */
 }
 
-/* Style for the subscribe section */
 .subscribe-section h2 {
     margin-bottom: 16px;
 }
 
 .subscribe-section p {
-    margin-bottom: 24px;
+    margin-bottom: 20px; /* Adjusted for consistent spacing */
 }
 
 .subscribe-section form {
     display: grid;
-    gap: 8px;
+    gap: 12px; /* Increased gap for better spacing */
 }
 
 .subscribe-section input[type="email"] {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width to prevent reaching the border */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 0 auto; /* Center the input field */
 }
 
 .subscribe-section button {
     padding: 10px;
-    background-color: #2364AA;
+    background-color: #FF6734; /* Ensure this matches your desired color */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%; /* Make the button take full width of its container */
+}
+
+/* Ensure the subscribe button reflects the specified color */
+.subscribe-section button[type="submit"] {
+    background-color: #FF6734; /* Adjust if necessary to match the correct color */
 }
 
 @media screen and (max-width: 768px) {
     .content-wrapper {
-        grid-template-columns: 1fr; /* Stack on small screens */
-        gap: 16px;
+        flex-direction: column;
     }
 
-    .events-calendar-section, .subscribe-section {
-        padding: 16px;
+    .subscribe-section, .events-calendar-section {
+        /* Ensure both sections take full width on smaller screens */
+        flex: none;
+        width: 100%;
+        max-width: 600px; /* Adjust based on your layout */
+        margin: 20px auto; /* Center the sections with some margin */
     }
 }
+
 
 
 

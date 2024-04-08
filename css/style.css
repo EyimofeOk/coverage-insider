@@ -1,9 +1,16 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+ */
+@font-face {
+    font-family: 'Nyght Serif';
+    src: url('NYGHT_SERIF_0_5/Web/WOFF/NyghtSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     margin: 0;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Nyght Serif', serif;
 }
 
 .site-header {
@@ -42,7 +49,7 @@ body {
 }
 
 .logo h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Nyght Serif', serif;
     font-size: 24px; /* Adjust based on your preference */
     margin: 0;
 }
@@ -123,7 +130,7 @@ body {
 }
 
 .feature-section h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Nyght Serif', serif;
     margin-bottom: 8px;
 }
 
@@ -131,7 +138,7 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px; /* Adjust spacing around the heading */
-    font-family: 'Playfair Display', serif; /* Example font, adjust as needed */
+    font-family: 'Nyght Serif', serif; /* Example font, adjust as needed */
     font-size: 1.5rem; /* Adjust size as needed */
     color: #333; /* Adjust color as needed */
 }
@@ -201,6 +208,10 @@ body {
     margin-bottom: 20px; /* Space between articles */
     border-bottom: 1px solid #ccc; /* Thin line as separator */
     padding-bottom: 20px; /* Add some padding to space out the content above the line */
+}
+
+.article-preview-section, .article-text {
+    font-family: 'Nyght Serif', serif;
 }
 
 /*
@@ -300,7 +311,7 @@ body {
 
 .subscribe-section button {
     padding: 10px;
-    background-color: #FF6734; /* Ensure this matches your desired color */
+    background-color: #09133F; /* Ensure this matches your desired color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -310,7 +321,7 @@ body {
 
 /* Ensure the subscribe button reflects the specified color */
 .subscribe-section button[type="submit"] {
-    background-color: #FF6734; /* Adjust if necessary to match the correct color */
+    background-color: #09133F; /* Adjust if necessary to match the correct color */
 }
 
 @media screen and (max-width: 768px) {
@@ -318,7 +329,7 @@ body {
         flex-direction: column;
     }
 
-    .subscribe-section, .events-calendar-section {
+    .subscribe-section {
         /* Ensure both sections take full width on smaller screens */
         flex: none;
         width: 100%;
@@ -327,16 +338,13 @@ body {
     }
 }
 
-
-
-
 /*=============== CONTACT PAGE ===============*/
 .contact-container {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nyght Serif', serif;
 }
 
 h2 {
@@ -365,7 +373,7 @@ textarea {
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #2364AA;
+    background-color: #09133F;
     color: white;
     border: none;
     border-radius: 5px;
@@ -374,7 +382,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #204056;
+    background-color: #F16734;
 }
 
 @media screen and (max-width: 768px) {
@@ -383,6 +391,7 @@ button[type="submit"]:hover {
     }
 }
 
+/*=============== FOOTER ===============*/
 .site-footer {
     background-color: #2F394D;
     color: #fff;
@@ -392,22 +401,24 @@ button[type="submit"]:hover {
 
 .footer-content {
     display: flex;
+    justify-content: space-between; /* Updated for optimal arrangement */
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    text-align: center; /* Centers content for smaller sections */
 }
 
 .footer-section {
-    margin-bottom: 20px;
+    flex: 1; /* Ensures equal width for each section */
+    margin: 20px; /* Provides some spacing */
 }
 
-.footer-section h3, .footer-section h4 {
-    color: #BA5C12; /* Example highlight color */
+.footer-section h4 {
+    color: #BA5C12; /* Highlight color for section titles */
 }
 
-.footer-section ul {
+.footer-section ul, .footer-section p {
     list-style: none;
     padding: 0;
+    margin: 10px 0; /* Provides spacing around lists and paragraphs */
 }
 
 .footer-section ul li a {
@@ -416,19 +427,15 @@ button[type="submit"]:hover {
     transition: color 0.3s;
 }
 
-.footer-section ul li a:hover {
-    color: #BA5C12;
+.footer-section ul li a:hover, .social-icons a:hover {
+    color: #BA5C12; /* Interaction highlight color */
 }
 
 .social-icons a {
-    color: #fff;
     margin: 0 10px;
     font-size: 1.5rem;
+    color: #fff;
     transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #BA5C12;
 }
 
 .footer-bottom {
@@ -439,48 +446,51 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
+    .footer-content, .footer-section {
+        flex: none; /* Resets flex settings for mobile */
+        width: 100%; /* Each section takes full width */
+        margin: 10px 0; /* Reduces margin for a tighter mobile layout */
     }
 
     .footer-section {
-        margin: 20px;
+        text-align: center; /* Ensures centered content on smaller screens */
     }
 }
 
+
 /*=============== ABOUT ===============*/
 
-.about-main {
+.about-main-content {
     max-width: 800px;
-    margin: auto;
+    margin: 40px auto;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
-.about-main h2 {
-    color: var(--first-color); /* Referencing the color variables defined earlier */
-    margin-bottom: 15px;
-}
-
-.about-main p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.about-main img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+.about-content h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-.about-principles ul {
-    list-style-type: none;
-    padding: 0;
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.about-principles li {
-    margin-bottom: 10px;
+/* Add responsive design */
+@media (max-width: 768px) {
+    .about-main-content {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
 }
 
 .team-member {

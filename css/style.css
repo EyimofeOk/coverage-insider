@@ -342,43 +342,63 @@ body {
 .contact-container {
     max-width: 600px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 10px; /* Adjust padding if necessary */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: 'Nyght Serif', serif;
+    background-color: #F9FCFB;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #F16734;
+    width: 100%;
 }
 
 .form-group {
     margin-bottom: 20px;
+    width: 100%; /* Full width to maximize the use of space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    width: calc(100% - 5px); /* Slightly reduces the width deduction for more space */
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+button[type="submit"] {
+    width: calc(100% - 5px); /* Provides a wider form element within the container */
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button[type="submit"] {
-    width: 100%;
-    padding: 10px;
     background-color: #09133F;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
 }
 
 button[type="submit"]:hover {
@@ -386,10 +406,11 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .contact-container {
-        margin: 20px;
+    .contact-container, .form-group, label, input[type="text"], input[type="email"], textarea, button[type="submit"] {
+        width: 95%; /* Expands the form elements to use more of the container's width on smaller screens */
     }
 }
+
 
 /*=============== FOOTER ===============*/
 .site-footer {
@@ -412,7 +433,7 @@ button[type="submit"]:hover {
 }
 
 .footer-section h4 {
-    color: #BA5C12; /* Highlight color for section titles */
+    color: #F16734; /* Highlight color for section titles */
 }
 
 .footer-section ul, .footer-section p {
@@ -428,7 +449,7 @@ button[type="submit"]:hover {
 }
 
 .footer-section ul li a:hover, .social-icons a:hover {
-    color: #BA5C12; /* Interaction highlight color */
+    color: #F16734; /* Interaction highlight color */
 }
 
 .social-icons a {
@@ -470,9 +491,9 @@ button[type="submit"]:hover {
 }
 
 .about-content h2 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #F16734;
 }
 
 .about-content p {

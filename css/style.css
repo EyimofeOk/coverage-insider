@@ -13,6 +13,8 @@ body {
     font-family: 'Nyght Serif', serif;
 }
 
+
+
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -199,6 +201,7 @@ body {
     margin: 0 auto; /* Centers the container */
     display: flex;
     flex-direction: column;
+    padding: 0 15px; /* Adds padding on the left and right */
 }
 
 .article-preview {

@@ -33,23 +33,23 @@ let currentCoverIndex = 0;
 const covers = [
     {
         img: "images/maincover1.jpg",
-        caption: "<em>On the Grid</em>, by Klaas Verplancke"
+        caption: "<em>Coming Soon</em>..."
     },
     {
         img: "images/IMG_4684.jpg",
-        caption: "<em>Another Title</em>, by Another Artist"
+        caption: "<em>Coming Soon</em>..."
     },
     {
         img: "images/IMG_4685.jpg",
-        caption: "<em>Third Title</em>, by Another Artist"
+        caption: "<em>Coming Soon</em>..."
     },    
     {
         img: "images/IMG_4686.jpg",
-        caption: "<em>Another One Title</em>, by Another Artist"
+        caption: "<em>Coming Soon</em>..."
     },
     {
         img: "images/IMG_4687.jpg",
-        caption: "<em>Third Title</em>, by Another Artist"
+        caption: "<em>Coming Soon</em>..."
     },
 ];
 

@@ -116,13 +116,23 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
     margin: 0;
 }
 
-.main-nav ul {
+/* .main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Adjust the space between navigation items */
+    gap: 20px;
 }
+ */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ensures items are lined up horizontally */
+    gap: 20px; /* Adjust the space between navigation items */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
 
 .main-nav a {
     text-decoration: none;
@@ -140,13 +150,18 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
     display: none;
 }
 
+.nav-toggle {
+    display: none; /* Always hide the toggle button */
+}
+
+
 @media (max-width: 768px) {
     .nav-list {
         display: none;
     }
 
     .nav-toggle {
-        display: block;
+        display: none;
     }
 
     .hamburger {

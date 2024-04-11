@@ -59,12 +59,10 @@ p, li, a, span, div {
 /*     font-size: 1rem; */
 }
 
-.bold-text {
-    font-weight: bold;
-}
-
-.italic-text {
-    font-style: italic;
+body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -257,6 +255,12 @@ p, li, a, span, div {
     padding: 0 15px; /* Adds padding on the left and right */
 }
 
+/* .articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+} */
+
 .article-preview {
     display: flex;
     align-items: center;
@@ -391,6 +395,46 @@ p, li, a, span, div {
         max-width: 600px; /* Adjust based on your layout */
         margin: 20px auto; /* Center the sections with some margin */
     }
+}
+
+/* Media Queries */
+@media (max-width: 768px) { /* Tablets and below */
+    body {
+        font-size: 14px; /* Smaller base font size */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+    .site-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-nav ul {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .articles-container {
+        grid-template-columns: 1fr; /* Stack articles on small screens */
+    }
+
+    .feature-section h2, .article-preview h3 {
+        font-size: 1rem; /* Adjust heading sizes for smaller screens */
+    }
+
+    .subscribe-section, .site-footer {
+        padding: 15px; /* Smaller padding on small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Between tablets and laptops */
+    /* Adjustments for devices in this range if necessary */
 }
 
 /*=============== CONTACT PAGE ===============*/

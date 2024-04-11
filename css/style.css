@@ -37,10 +37,17 @@ body {
 }
 
 /* All headings (h1, h2, etc.) bold */
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     font-family: 'Nyght Serif', serif;
     font-weight: bold; /* Make headings bold */
     font-size: 1.5rem;
+}
+
+/* All headings (h1, h2, etc.) bold */
+h3, h4, h5, h6 {
+    font-family: 'Nyght Serif', serif;
+    font-weight: italic; /* Make headings bold */
+    font-size: 1.3rem;
 }
 
 /* All subheadings light italic - if 'light' is not available, just italic is used */
@@ -340,11 +347,13 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
 
 .subscribe-section {
     flex: 1;
+    /* Removed flex: 1 to avoid forcing the element to fit in a flex container in a way that might cause overflow */
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 5% 2%; /* Adjust margins to add some space around */
+    margin: 5% 2%; /* Kept the margin, but ensure it doesn't cause overflow */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
 }
 
 .subscribe-section h2 {
@@ -378,6 +387,12 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
     width: 100%; /* Make the button take full width of its container */
 }
 
+.subscribe-section input[type="email"], .subscribe-section button {
+    /* Using 100% width for input and button, padding and border included in the element's total width */
+    width: 100%;
+    box-sizing: border-box; /* Adjust this to ensure padding does not add to the width */
+}
+
 /* Ensure the subscribe button reflects the specified color */
 .subscribe-section button[type="submit"] {
     background-color: #09133F; /* Adjust if necessary to match the correct color */
@@ -390,9 +405,10 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
 
     .subscribe-section {
         /* Ensure both sections take full width on smaller screens */
-        flex: none;
+        /* flex: none; */
         width: 100%;
-        max-width: 600px; /* Adjust based on your layout */
+        /* max-width: 600px; */
+        max-width: none;
         margin: 20px auto; /* Center the sections with some margin */
     }
 }
@@ -513,7 +529,7 @@ button[type="submit"]:hover {
 
 /*=============== FOOTER ===============*/
 .site-footer {
-    background-color: #2F394D;
+    background-color: #09133F;
     color: #fff;
     padding: 20px;
     /* font-size: 0.9rem; */

@@ -73,4 +73,13 @@ document.addEventListener("DOMContentLoaded", function() {
     articleSection.style.height = `${maxHeight}px`;
     calendarSection.style.height = `${maxHeight}px`;
   });
+
   
+// to highlight overflowing elements directly on the page:
+/* document.querySelectorAll('*').forEach(element => {
+    if (element.offsetWidth > document.documentElement.clientWidth) {
+      console.log('Overflowing element:', element.tagName, 'Class:', element.className);
+      // Highlight the element by setting a red border around it
+      element.style.border = "2px solid red";
+    }
+  }); */

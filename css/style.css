@@ -1,18 +1,71 @@
 /* Google Fonts */
 /* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
  */
+
+/* @import url('https://fonts.cdnfonts.com/css/nyght-serif'); */
+
+
+/* Nyght Serif Regular */
 @font-face {
     font-family: 'Nyght Serif';
-    src: url('NYGHT_SERIF_0_5/Web/WOFF/NyghtSerif-Regular.woff') format('woff');
+    src: url('../nyght-serif-main/fonts/WEB/NyghtSerif-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-body {
-    margin: 0;
-    font-family: 'Nyght Serif', serif;
+/* Nyght Serif Italic */
+@font-face {
+    font-family: 'Nyght Serif';
+    src: url('../nyght-serif-main/fonts/WEB/NyghtSerif-BoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
 
+/* Nyght Serif Bold */
+@font-face {
+    font-family: 'Nyght Serif';
+    src: url('../nyght-serif-main/fonts/WEB/NyghtSerif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Nyght Serif', sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* All headings (h1, h2, etc.) bold */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nyght Serif', serif;
+    font-weight: bold; /* Make headings bold */
+    font-size: 1.5rem;
+}
+
+/* All subheadings light italic - if 'light' is not available, just italic is used */
+.subheading {
+    font-family: 'Nyght Serif', serif;
+    font-style: italic;
+    font-weight: lighter; /* Use 'lighter' if available, otherwise just italic */
+    font-size: 1.2rem;
+}
+
+/* All other text regular */
+p, li, a, span, div {
+    font-family: 'Nyght Serif', serif;
+    font-weight: italic;
+    font-style: normal;
+/*     font-size: 1rem; */
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+}
 
 
 .site-header {
@@ -132,7 +185,7 @@ body {
 }
 
 .feature-section h2 {
-    font-family: 'Nyght Serif', serif;
+    /* font-family: 'Nyght Serif', serif; */
     margin-bottom: 8px;
 }
 
@@ -140,15 +193,15 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px; /* Adjust spacing around the heading */
-    font-family: 'Nyght Serif', serif; /* Example font, adjust as needed */
-    font-size: 1.5rem; /* Adjust size as needed */
+    /* font-family: 'Nyght Serif', serif; */
+    /* font-size: 1.5rem; */
     color: #333; /* Adjust color as needed */
 }
 
 
 .cover-date {
     margin-bottom: 20px;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
 }
 
 .magazine-cover-container {
@@ -172,7 +225,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 24px; /* Adjust as needed */
+    /* font-size: 24px; */
 }
 
 .prev {
@@ -213,9 +266,9 @@ body {
     padding-bottom: 20px; /* Add some padding to space out the content above the line */
 }
 
-.article-preview-section, .article-text {
+/* .article-preview-section, .article-text {
     font-family: 'Nyght Serif', serif;
-}
+} */
 
 /*
 .article-preview:last-child {
@@ -228,7 +281,6 @@ body {
 }
 
 .article-image {
-    flex: 1;
     margin-left: 100px; /* Increase the left margin */
 }
 
@@ -347,7 +399,7 @@ body {
     margin: 40px auto;
     padding: 10px; /* Adjust padding if necessary */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    font-family: 'Nyght Serif', serif;
+    /* font-family: 'Nyght Serif', serif; */
     background-color: #F9FCFB;
     /* display: flex;
     flex-direction: column; */
@@ -420,7 +472,7 @@ button[type="submit"]:hover {
     background-color: #2F394D;
     color: #fff;
     padding: 20px;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
 }
 
 .footer-content {
@@ -500,7 +552,7 @@ button[type="submit"]:hover {
 }
 
 .about-content p {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -512,9 +564,9 @@ button[type="submit"]:hover {
         padding: 15px;
     }
 
-    .about-content h2 {
+/*     .about-content h2 {
         font-size: 1.5rem;
-    }
+    } */
 }
 
 .team-member {

@@ -490,6 +490,15 @@ h2 {
     width: 100%;
 }
 
+.contact-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #09133F;
+    width: 100%;
+    font-weight: bold; /* Make headings bold */
+
+}
+
 .form-group {
     margin-bottom: 20px;
     width: 100%; /* Full width to maximize the use of space */

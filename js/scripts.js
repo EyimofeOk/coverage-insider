@@ -37,11 +37,11 @@ const covers = [
     },
     {
         img: "images/4.png",
-        caption: "<em>No one really knows what PR is</em>."
+        caption: "<em>No one really knows what PR is</em>"
     },
     {
         img: "images/5.png",
-        caption: "<em>We've heard people say that PR is not introvert-friendly</em>."
+        caption: "<em>We've heard people say that PR is not introvert-friendly</em>"
     },    
     {
         img: "images/6.png",

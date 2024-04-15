@@ -32,23 +32,23 @@ function adjustBodyPadding() {
 let currentCoverIndex = 0;
 const covers = [
     {
-        img: "images/maincover1.jpg",
+        img: "images/cover1.png",
         caption: "<em>New Issue</em>"
     },
     {
-        img: "images/IMG_4684.jpg",
+        img: "images/4.png",
         caption: "<em>No one really knows what PR is</em>."
     },
     {
-        img: "images/IMG_4685.jpg",
+        img: "images/6.png",
         caption: "<em>We've heard people say that PR is not introvert-friendly</em>."
     },    
     {
-        img: "images/IMG_4686.jpg",
+        img: "images/5.png",
         caption: "<em>How much following up is too much following up?</em>"
     },
     {
-        img: "images/IMG_4687.jpg",
+        img: "images/7.png",
         caption: "<em>To pitch or not to pitch?</em>"
     },
 ];

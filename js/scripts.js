@@ -33,23 +33,23 @@ let currentCoverIndex = 0;
 const covers = [
     {
         img: "images/maincover1.jpg",
-        caption: "<em>Coming Soon</em>..."
+        caption: "<em>New Issue</em>"
     },
     {
         img: "images/IMG_4684.jpg",
-        caption: "<em>Coming Soon</em>..."
+        caption: "<em>No one really knows what PR is</em>."
     },
     {
         img: "images/IMG_4685.jpg",
-        caption: "<em>Coming Soon</em>..."
+        caption: "<em>We've heard people say that PR is not introvert-friendly</em>."
     },    
     {
         img: "images/IMG_4686.jpg",
-        caption: "<em>Coming Soon</em>..."
+        caption: "<em>How much following up is too much following up?</em>"
     },
     {
         img: "images/IMG_4687.jpg",
-        caption: "<em>Coming Soon</em>..."
+        caption: "<em>To pitch or not to pitch?</em>"
     },
 ];
 

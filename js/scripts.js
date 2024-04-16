@@ -33,11 +33,11 @@ let currentCoverIndex = 0;
 const covers = [
     {
         img: "images/cover1.png",
-        caption: "<em>New Issue</em>"
+        caption: "<em>Issue Cover</em>"
     },
     {
         img: "images/2.png",
-        caption: "<em>Oh Yeah, it's similar but this is PR?</em>"
+        caption: "<em>About the Issue</em>"
     },
     {
         img: "images/4.png",

@@ -271,6 +271,15 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, div {
     background-color: #ccc; /* Thin line to separate sections */
 }
 
+.article-preview-section h5 {
+    /* text-align: center; */
+    margin-bottom: 20px;
+    color: #F16734;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+
 .articles-container {
     max-width: 800px; /* Adjust this value based on your design preference */
     margin: 0 auto; /* Centers the container */
@@ -489,6 +498,7 @@ h2 {
     color: #F16734;
     width: 100%;
 }
+
 
 .contact-container p {
     text-align: center;

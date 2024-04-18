@@ -40,7 +40,7 @@ const covers = [
         caption: "<em>About the Issue</em>"
     },
     {
-        img: "images/4.png",
+        img: "images/3.png",
         caption: "<em>No one really knows what PR is</em>"
     },
     {

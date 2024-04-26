@@ -44,7 +44,7 @@ const covers = [
         caption: "<em>No one really knows what PR is</em>"
     },
     {
-        img: "images/5.png",
+        img: "images/4.png",
         caption: "<em>We've heard people say that PR is not introvert-friendly</em>"
     },    
     {
